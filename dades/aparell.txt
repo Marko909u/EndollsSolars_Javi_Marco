@@ -1,0 +1,2 @@
+23932382P,Ordenador,150,false
+23932382P,movil,1,true
