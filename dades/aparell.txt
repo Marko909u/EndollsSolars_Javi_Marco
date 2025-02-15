@@ -1,2 +1,5 @@
 23932382P,Ordenador,150,false
 23932382P,movil,1,true
+18415515J,Lavadora,50,false
+18415515J,Ordenador,300,false
+18415515J,Ventilador,30,false

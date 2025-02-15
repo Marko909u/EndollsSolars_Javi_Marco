@@ -146,6 +146,12 @@ public class Casa {
         return superficiePlaca <= superficieDisponible;
     }
 
+    /**
+     * Este metodo no me ha dado tiempo a pasarlo a main.
+     * SaltoPlomos identifica todos los aparatos de la casa para comprobar si estan encendidos tenerlos en cuenta al encender otro y que salten los plomos si sobre pasa la capacidad.
+     * @param nif
+     * @param descripcion
+     */
     public void SaltoPlomos(String nif, String descripcion) {
         if (listaCasa.contains(new Casa(nif))) {
             int Index = listaCasa.indexOf(new Casa(nif));
@@ -162,6 +168,7 @@ public class Casa {
                 potenciaAparell += aparell.getPotencia();
                 if (potenciaTotal < potenciaAparell) {
                     c.setInterruptor(false);
+                    ApagarAparells();
                     System.out.println("S'ha ences l'aparell");
                     System.out.println("Han saltado los plomos de la casa");
                 } else {
@@ -169,6 +176,12 @@ public class Casa {
                     System.out.println("S'ha ences l'aparell");
                 }
             }
+        }
+    }
+
+    private void ApagarAparells() {
+        for(Aparell c: Aparell){
+            c.setInterruptor(false);
         }
     }
 }
